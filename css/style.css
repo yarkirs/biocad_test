@@ -1,0 +1,341 @@
+@import "../css/fonts.css";
+/*=============== Fonts ===============*/
+body {
+  font-family: 'TT Norms Regular';
+}
+/*=============== Colors ===============*/
+/*=============== Preloade start ===============*/
+.preloader {
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  overflow: hidden;
+  background: rgba(255, 255, 255, 0.8);
+  -webkit-transition: 0.3s opacity;
+  transition: 0.3s opacity;
+  z-index: 1001;
+}
+.preloader img {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+.preloader.done {
+  display: none;
+}
+/*=============== Preloade end ===============*/
+/*=============== Styles ===============*/
+.btn-dark {
+  background: #353535;
+}
+.btn-primary {
+  background: #4990e2;
+}
+.search-box {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  margin-top: 30px;
+  background: white;
+  z-index: 2;
+}
+.search-box h3 {
+  color: #8c8c8c;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0.16px;
+  -webkit-font-feature-settings: 'pnum' on, 'lnum' on;
+          font-feature-settings: 'pnum' on, 'lnum' on;
+}
+.search-form-input {
+  display: inline-block;
+  width: 210px;
+  height: 30px;
+}
+.search-btn {
+  display: inline-block;
+  margin-left: 20px;
+  width: 90px;
+  height: 40px;
+}
+.product {
+  margin-top: 20px;
+}
+.product-header {
+  position: relative;
+  margin-bottom: 30px;
+}
+.product-header h2 {
+  font-family: 'TT Norms Medium';
+  display: inline-block;
+  font-size: 20px;
+  line-height: 24px;
+  letter-spacing: 0.5px;
+  -webkit-font-feature-settings: 'pnum' on, 'lnum' on;
+          font-feature-settings: 'pnum' on, 'lnum' on;
+}
+.product-header .wrap-img {
+  display: inline-block;
+  float: left;
+  margin-top: 8px;
+  margin-right: 21px;
+  min-height: 60px;
+}
+.product-header .wrap-img img {
+  width: 40px;
+  height: 40px;
+}
+.product-form {
+  width: 220px;
+}
+.product-form button {
+  font-family: 'TT Norms Medium';
+  margin-top: 51px;
+  width: 180px;
+  height: 40px;
+  border: none;
+  -webkit-font-feature-settings: 'pnum' on, 'lnum' on;
+          font-feature-settings: 'pnum' on, 'lnum' on;
+  font-size: 14px;
+  line-height: 24px;
+  letter-spacing: 0.16px;
+}
+.product-inform {
+  background: #F7F7F7;
+  border-radius: 5px;
+  padding: 20px 18px ;
+}
+.product-inform span {
+  color: #8c8c8c;
+}
+.product-inform p {
+  font-family: 'TT Norms Medium';
+  margin-bottom: 10px;
+  font-size: 14px;
+  line-height: 17px;
+}
+.product-inform a {
+  outline: none;
+  text-decoration: none;
+}
+.product-inform a:hover {
+  color: #3383de;
+}
+.radio {
+  /* Create a custom radio button */
+}
+.radio-wrap {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 22px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  color: #353535;
+  font-size: 14px;
+  line-height: 20px;
+  /* On mouse-over, add a grey background color */
+  /* When the radio button is checked, add a blue background */
+  /* Show the indicator when checked */
+}
+.radio-wrap input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+}
+.radio-wrap:hover input ~ .radio-checkmark {
+  background-color: #ccc;
+}
+.radio-wrap input:checked ~ .radio-checkmark {
+  background-color: white;
+}
+.radio-wrap input:checked ~ .radio-checkmark:after {
+  display: block;
+}
+.radio-checkmark {
+  position: absolute;
+  top: -2px;
+  left: 0;
+  height: 24px;
+  width: 24px;
+  background-color: #ffff;
+  border: 2px solid #C1C1C1;
+  border-radius: 50%;
+  /* Create the indicator */
+}
+.radio-checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+  /* Style the indicator */
+}
+.radio-wrap .radio-checkmark:after {
+  top: 3px;
+  left: 3.2px;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: #4990e2;
+}
+/*Report section */
+.report {
+  margin-top: 30px;
+  padding-bottom: 50px;
+}
+.report h2 {
+  font-family: 'TT Norms Medium';
+  font-size: 16px;
+  line-height: 19px;
+}
+.table-wrap {
+  /*overflow-x: auto;*/
+  padding: 40px;
+  background: #FFFFFF;
+  border: 1px dashed #939DA6;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  -webkit-box-shadow: 0px 0px 40px rgba(0, 0, 0, 0.15);
+          box-shadow: 0px 0px 40px rgba(0, 0, 0, 0.15);
+}
+.table tr {
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+.table tr:hover {
+  background: #ccc;
+}
+.table tr:nth-child(even) {
+  background: #f5f5f5 ;
+}
+.table th {
+  border-top: none;
+}
+.table-col {
+  font-size: 13px;
+  line-height: 15px;
+  cursor: pointer;
+  -webkit-transition: 0.3s all;
+  transition: 0.3s all;
+  color: #8c8c8c;
+}
+.table-col:hover {
+  color: #353535;
+}
+.table-string {
+  font-size: 13px;
+  line-height: 15px;
+}
+.table .col-bufer {
+  width: 25%;
+}
+.table .check-good {
+  margin-left: 5px;
+  color: #6bae45;
+}
+.table .check-bad {
+  margin-left: 5px;
+  color: #d10000;
+}
+/* Pagination links */
+.pagination {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-top: 30px;
+}
+.pagination a {
+  color: black;
+  padding: 4px 12px;
+  text-decoration: none;
+  -webkit-transition: background-color 0.3s;
+  transition: background-color 0.3s;
+}
+.pagination a.active {
+  background-color: #4990e2;
+  color: white;
+}
+.pagination a:hover:not(.active) {
+  background-color: #ddd;
+}
+/*=============== Media request ===============*/
+@media (max-width: 991px) {
+  .report h2 {
+    text-align: center;
+    padding: 5px;
+  }
+  .table {
+    display: block;
+    width: 100%;
+  }
+  .table-wrap {
+    padding: 0;
+  }
+  .table thead,
+  .table tbody,
+  .table thead th {
+    display: block;
+  }
+  .table thead {
+    float: left;
+    width: 80px;
+  }
+  .table tbody {
+    overflow-x: auto;
+  }
+  .table tbody tr {
+    display: table-cell;
+    border-top-right: 1px solid #ccc;
+  }
+  .table td {
+    display: block;
+    border: none;
+    min-width: 217px;
+  }
+  .table tr:hover {
+    background: none;
+  }
+  .table-col {
+    padding: 5px !important;
+  }
+  .string-slope,
+  .string-offset {
+    padding-bottom: 20px !important;
+  }
+  .col-buffer {
+    min-height: 100px;
+  }
+}
+@media (max-width: 767px) {
+  .search-box h3 {
+    text-align: center;
+    padding-bottom: 5px;
+  }
+  .search-form {
+    padding-bottom: 5px;
+    text-align: center;
+  }
+  .search-form-input {
+    width: 170px;
+  }
+  .product-header {
+    margin-left: 12%;
+  }
+  .product-form {
+    margin: auto;
+    padding-bottom: 30px;
+  }
+  .product-form button {
+    margin-top: 20px;
+  }
+}

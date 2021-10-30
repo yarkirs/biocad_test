@@ -1,0 +1,391 @@
+/*=============== Fonts ===============*/ 
+@import "../css/fonts.css";
+
+.reg() {
+  font-family: 'TT Norms Regular';
+}
+.medium() {
+  font-family: 'TT Norms Medium'
+}
+
+body {
+  .reg();
+}
+
+/*=============== Colors ===============*/ 
+@btn-dark: #353535;
+@btn-blue: #4990E2;
+@text-grey: #8C8C8C;
+@text-dark: #353535;
+// for table
+@check: #6BAE45;
+@uncheck: #D10000;
+
+/*=============== Preloade start ===============*/ 
+
+.preloader {
+      position: fixed;
+      left: 0;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      overflow: hidden;
+      background: rgba(255, 255, 255, 0.8);
+      transition: 0.3s opacity;
+      z-index: 1001;
+      img {
+		position: fixed;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+	}
+      &.done{
+        display: none;
+      }
+    }
+/*=============== Preloade end ===============*/ 
+
+
+/*=============== Styles ===============*/ 
+.btn-dark {
+  background: @btn-dark;
+}
+.btn-primary {
+  background: @btn-blue;
+}
+.search{
+  &-box{
+    position: sticky;
+    top: 0;
+    margin-top: 30px;
+    background: white;
+    z-index: 2;
+    h3{
+    color: @text-grey;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: 0.16px;
+    font-feature-settings: 'pnum' on, 'lnum' on;
+  }
+  }
+  &-form{
+    &-input{
+      display: inline-block;
+      width: 210px;
+      height: 30px;
+    }
+  }
+  &-btn{
+    display: inline-block;
+    margin-left: 20px;
+    width: 90px;
+    height: 40px;
+  }
+}
+
+.product{
+  margin-top: 20px;
+  &-header{
+    position: relative;
+    margin-bottom: 30px;
+    h2{
+      .medium();
+      display:inline-block;
+      font-size: 20px;
+      line-height: 24px;
+      letter-spacing: 0.5px;
+      font-feature-settings: 'pnum' on, 'lnum' on;
+    }
+    .wrap-img{
+      display:inline-block;
+      float: left;
+      margin-top: 8px;
+      margin-right: 21px;
+      min-height: 60px;
+      & img{
+        width: 40px;
+        height: 40px;
+      }
+    }
+  }
+  &-form{
+    width: 220px;
+    & button {
+      .medium();
+      margin-top: 51px;
+      width: 180px;
+      height: 40px;
+      border:none;
+      font-feature-settings: 'pnum' on, 'lnum' on;
+      font-size: 14px;
+      line-height: 24px;
+      letter-spacing: 0.16px;
+    }
+  }
+  &-inform{
+    background: #F7F7F7;
+    border-radius: 5px;
+    padding: 20px 18px ;
+    & span {
+      color: @text-grey;
+    }
+    & p{
+      .medium();
+      margin-bottom: 10px;
+      font-size: 14px;
+      line-height: 17px;
+    }
+    & a{
+      outline: none;
+      text-decoration: none;
+      &:hover{
+        color: darken(@btn-blue, 5%);
+      }
+    }
+  }
+}
+.radio{
+  &-wrap{
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 22px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+
+    color: @text-dark;
+    font-size: 14px;
+    line-height: 20px;
+    & input{
+      position: absolute;
+      opacity: 0;
+      cursor: pointer;
+    }
+    /* On mouse-over, add a grey background color */
+    &:hover input ~ .radio-checkmark {
+      background-color: #ccc;
+    }
+    /* When the radio button is checked, add a blue background */
+    & input:checked ~ .radio-checkmark{
+       background-color: white;
+    }
+    /* Show the indicator when checked */
+    & input:checked ~ .radio-checkmark:after {
+      display: block;
+    }
+  }
+  /* Create a custom radio button */
+  &-checkmark{
+    position: absolute;
+    top: -2px;
+    left: 0;
+    height: 24px;
+    width: 24px;
+    background-color: #ffff;
+    border: 2px solid #C1C1C1;
+    border-radius: 50%;
+
+    /* Create the indicator */
+    &:after{
+      content: "";
+      position: absolute;
+      display: none;
+
+      /* Style the indicator */
+      .radio-wrap &{
+        top: 3px;
+        left: 3.2px;
+        width: 14px;
+        height: 14px;
+        border-radius: 50%;
+        background: @btn-blue;
+      }
+    }
+  }
+}
+
+/*Report section */
+
+.report{
+  margin-top: 30px;
+  padding-bottom: 50px;
+  & h2{
+    .medium();
+    font-size: 16px;
+    line-height: 19px;
+  }
+}
+
+
+.table{
+  // min-width: 930px;
+  // width: 100%;
+  &-wrap{
+    /*overflow-x: auto;*/
+    padding: 40px;
+    background: #FFFFFF;
+    border: 1px dashed #939DA6;
+    box-sizing: border-box;
+    box-shadow: 0px 0px 40px rgba(0, 0, 0, 0.15);
+  }
+  & tr{
+    transition: all 0.3s;
+  }
+  & tr:hover { 
+  background: #ccc; 
+}
+  & tr:nth-child(even) {
+    background: #f5f5f5 ;
+  }
+  & th{
+    border-top: none
+  }
+  &-col{
+    font-size: 13px;
+    line-height: 15px;
+    cursor: pointer;
+    transition: 0.3s all;
+    color: @text-grey;
+    &:hover{
+      color: @text-dark;
+    }
+  }
+  &-string{
+    font-size: 13px;
+    line-height: 15px;
+  }
+  .col-bufer{
+    width: 25%;
+  }
+
+  // check value good or bad
+  & .check-good {
+    margin-left: 5px;
+    color: @check;
+  }
+  & .check-bad {
+    margin-left: 5px;
+    color: @uncheck;
+  }
+}
+
+/* Pagination links */
+.pagination {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+  & a{
+     color: black;
+     padding: 4px 12px;
+     text-decoration: none;
+     transition: background-color .3s;
+     &.active{
+      background-color: @btn-blue;
+      color: white;
+     }
+     &:hover:not(.active){
+      background-color: #ddd;
+     }
+  }
+}
+
+
+/*=============== Media request ===============*/
+
+
+@media (max-width: 1201px){
+ 
+}
+
+@media (max-width: 991px){
+  .report{
+    & h2 {
+      text-align: center;
+      padding: 5px;
+    }
+  }
+  .table{
+    &-wrap{
+      padding: 0;
+    }
+    display: block;
+    width: 100%;
+    & thead, 
+    & tbody, 
+    & thead th{
+      display: block;
+    }
+    & thead {
+      float: left;
+      width: 80px;
+
+    }
+    & tbody {
+      overflow-x: auto;
+    }
+    & tbody tr {
+      display: table-cell;
+      border-top-right: 1px solid #ccc;
+    }
+    & td {
+      display: block;
+      border:none;
+      min-width: 217px;
+
+    }
+      & tr:hover { 
+      background: none; 
+    }
+    &-col{
+    padding: 5px !important;
+
+  }
+  }
+  .string-slope, .string-offset{
+    padding-bottom: 20px !important;
+  }
+  .col-buffer{
+    min-height: 100px;
+  }
+
+  .col-user{
+    // padding-bottom: 10px !important; 
+  }
+}
+
+@media (max-width: 767px){
+  .search{
+    &-box{
+      & h3{
+        text-align: center;
+        padding-bottom: 5px;
+      }
+    }
+    &-form{
+      padding-bottom: 5px;
+      text-align: center;
+      &-input{
+        width: 170px;
+      }
+    }
+  }
+  .product{
+    &-header{
+       margin-left: 12%;
+    }
+    &-form{
+      margin:auto;
+      padding-bottom: 30px;
+      & button{
+        margin-top: 20px;
+      }
+    }
+  }
+}
+@media (max-width: 550px) {
+
+}

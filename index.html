@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="ru">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<meta name="description" content="">
+		<meta name="author" content="">
+
+		<title>BioCad test</title>
+		
+
+		<link rel="icon" href="img/icon.jpg">
+		<!-- Custom styles for this template -->
+
+		<link rel="stylesheet" href="css/reset.min.css">
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+		<!-- Font awesome -->
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.min.css"/>
+		<link rel="stylesheet" href="css/style.css">
+
+		
+	</head>
+
+	<body>
+		<!-- ====================== Preloader====================== -->
+		<div class="preloader" id="preloader" >
+			<img src="img/preloader.svg" alt="Loading">
+		</div>
+
+		<!-- ====================== Body ====================== -->
+		<div class="main">
+			<div class="container">
+				<div class="search-box">
+					<h3>Enter inventory number, guid or bims id</h3>
+					<form action="#" class="search-form">
+						<input type="text" class="form-control search-form-input" placeholder="A-001234">
+						<button class="btn btn-dark search-btn">Search</button>
+					</form>
+				</div>
+				<div class="product">
+					<div class="row">
+						<div class="col-md-4 col-12">
+							<div class="product-header">
+								<div class="wrap-img">
+									<img src="img/scale.png" alt="product img">
+								</div>
+								<h2>Аналитические весы <br>OHAUS Adventurer <br>АХ324(B715976163)</h2>
+							</div>
+
+							<form class="product-form" action="#">
+								<div class="input-group mb-3">
+								  <select class="custom-select" id="inputGroupSelect01">
+								    <option selected>1 month</option>
+								    <option value="1">1 day</option>
+								    <option value="2">1 week</option>
+								    <option value="3">5 month</option>
+								    <option value="4">1 year</option>
+								  </select>
+								</div>
+								<div class="radio">
+									<label class="radio-wrap">Calibration
+									  <input type="radio" checked="checked" name="radio">
+									  <span class="radio-checkmark"></span>
+									</label>
+									<label class="radio-wrap">Measuring
+									  <input type="radio" name="radio">
+									  <span class="radio-checkmark"></span>
+									</label>
+									<label class="radio-wrap">Using
+									  <input type="radio" name="radio">
+									  <span class="radio-checkmark"></span>
+									</label>
+								</div>
+								<button class="btn btn-primary ">Generate report</button>
+							</form>
+
+						</div>
+						<div class="col-md-8 col-12">
+							<div class="product-inform">
+								<p id="product-type"><span>Тип оборудования: </span>Весы</p>
+								<p id="product-status"><span>Статус: </span>Готов к работе</p>
+								<p id="product-create"><span>Изготовитель: </span>Ohaus</p>
+								<p id="product-model"><span>Модель: </span>AX-123</p>
+								<p id="product-responsible"><span>Ответственное подразделение (ремонт): </span>Группа обслуживания лабораторного оборудования</p>
+								<p id="product-operate"><span>Эксплуатирующее подразделение: </span>Химико-аналитическая лаборатория 2.0</p>
+								<p id="product-mol"><span>МОЛ: </span>  Иванов Иван Иванович</p>
+								<p id="product-territory"><span>Территория: </span>г. Санкт-Петербург (Нойдорф)</p>
+								<p id="product-serial"><span>Серийный номер: </span> B715976163</p>
+								<p id="product-guid"><span>GUID: </span><a href="#">508b2a71-662e-4983-ae0c-3cb0c1cd21c5</a></p>
+								<p id="product-bimsId"><span>Bims ID: </span> <a href="#">49db8db1-585f-4b9e-bbf0-8a59698edc8b</a></p>
+								<p id="product-tam"><span>Tam: </span> <a href="#">А-001234</a></p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="report">
+			<div class="container">
+				<div class="table-wrap">
+				    <table class="table" id="table">
+				    	<h2>Calibration report</h2>
+				        <thead>
+				            <tr class="table-columns">
+				                <th class="table-col col-date"  title="Здесь должна быть кнопка сортировки">Date</th>
+				                <th class="table-col col-buffer"  title="Здесь должна быть кнопка сортировки">Used buffer solutions</th>
+				                <th class="table-col col-slope" title="Здесь должна быть кнопка сортировки">Slope, % <br>Norm 95-105</th>
+				                <th class="table-col col-offset" title="Здесь должна быть кнопка сортировки">Offset, mV <br>Norm ±(0-20)</th>
+				                <th class="table-col col-user" title="Здесь должна быть кнопка сортировки">User</th>
+				            </tr>
+				             <!--ряд с ячейками заголовков-->
+				        </thead>
+				        <tbody>
+				            <!-- <tr>
+				                <td class="table-string string-date">04.10.19 10:23</td>
+				                <td class="table-string string-bufer">
+				                	В1: № 2000460789536: pH 1.09 <br> 
+				                	В2: № 2000460789536: pH 2.00 <br>
+				                	В3: № 2000460789536: pH 4.01 <br>
+				                	В4: № 2000460789536: pH 7.00 <br>
+				                	В5: № 2000460789536: pH 9.21 
+				                </td>
+				                <td class="table-string string-slope">98.7
+				                	<i class="fas fa-times-circle check-bad"></i></td>
+				                <td class="table-string string-offset">-0.3
+				                	<i class="fas fa-check-circle check-good"></td>
+				                <td class="table-string string-user">Иванов Генадий Петрович</td>
+				            </tr> -->
+				            <!--ряд с ячейками тела таблицы-->
+				        </tbody>
+				    </table>
+				</div>
+			</div>
+		</div>
+
+
+
+		<!-- =================== Scripts =================== -->
+
+		<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+		<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+		<!-- =================== Preloader script =================== -->
+		  <script>
+		  	document.body.onload = () => {
+		  		let preloader = document.getElementById('preloader')
+		  		setTimeout(() => {
+		  			if(!preloader.classList.contains('done')) {
+		  				preloader.classList.add('done')
+		  			}
+		  		},1500)
+		  	}
+		  </script>
+
+		<!-- =================== Main script =================== -->
+		
+		<script src="js/database.js"></script>
+		<script src="js/script.js"></script>
+
+	</body>
+</html>
